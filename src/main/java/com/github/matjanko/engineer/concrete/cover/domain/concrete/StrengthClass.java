@@ -1,5 +1,7 @@
 package com.github.matjanko.engineer.concrete.cover.domain.concrete;
 
+import java.util.stream.Stream;
+
 public enum StrengthClass {
     C12_15("C12/15"),
     C16_20("C16/20"),
@@ -19,5 +21,13 @@ public enum StrengthClass {
 
     public String getName() {
         return name;
+    }
+
+    public static StrengthClass getStrengthClass(String name) {
+        return Stream.of(StrengthClass.values())
+                .filter(s -> s.name.equals(name))
+                .findAny()
+                .orElseThrow(() -> new IllegalArgumentException(
+                        String.format("Invalid concrete strength class %s.", name)));
     }
 }
