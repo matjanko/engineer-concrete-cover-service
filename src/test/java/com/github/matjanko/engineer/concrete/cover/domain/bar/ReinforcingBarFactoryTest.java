@@ -10,7 +10,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(JUnitParamsRunner.class)
-public class ReinforcingBarTest {
+public class ReinforcingBarFactoryTest {
 
     private ReinforcingBarFactory reinforcingBarFactory = new ReinforcingBarFactory();
 
