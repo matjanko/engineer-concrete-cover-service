@@ -10,7 +10,7 @@ import com.github.matjanko.engineer.concrete.cover.domain.concrete.ConcreteFacto
 import org.junit.Assert;
 import org.junit.Test;
 
-public class BondMinimumCoverTest {
+public class BondMinCoverTest {
 
     private ReinforcingBarFactory reinforcingBarFactory = new ReinforcingBarFactory();
     private ConcreteFactory concreteFactory = new ConcreteFactory();
@@ -36,7 +36,7 @@ public class BondMinimumCoverTest {
         Concrete concrete = concreteFactory.createConcrete("C25/30", maxAggregateSize);
 
         //when
-        BondMinimumCover minimumCover = new BondMinimumCover(bar, concrete);
+        BondMinCover minimumCover = new BondMinCover(bar, concrete);
         int actualCover = minimumCover.getCover();
 
         //then
