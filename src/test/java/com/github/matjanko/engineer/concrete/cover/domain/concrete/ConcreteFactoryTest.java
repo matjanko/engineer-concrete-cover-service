@@ -17,6 +17,13 @@ public class ConcreteFactoryTest {
         createConcreteTest(input);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    @Parameters({ "class", "C23/123", "CC/21", "0-01" })
+    public void createConcreteInvalidStrengthNameTest(String input) {
+        createConcreteTest(input);
+    }
+
+
     private void createConcreteTest(String strengthClass) {
         //given
         Concrete concrete = concreteFactory.createConcrete(strengthClass, 32);
