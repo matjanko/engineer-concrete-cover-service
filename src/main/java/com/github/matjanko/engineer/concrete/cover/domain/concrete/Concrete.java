@@ -8,4 +8,8 @@ public class Concrete {
         this.strengthClass = strengthClass;
         this.maxAggregateSize = maxAggregateSize;
     }
+
+    public String getStrengthClassName() {
+        return strengthClass.getName();
+    }
 }
