@@ -1,4 +1,7 @@
-package com.github.matjanko.engineer.concrete.cover.domain;
+/**
+ * @author matjanko
+ */
+package com.github.matjanko.engineer.concrete.cover.domain.bar;
 
 public class ReinforcingBar {
     private final int diameter;
