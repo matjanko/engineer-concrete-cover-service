@@ -4,13 +4,13 @@
 package com.github.matjanko.engineer.concrete.cover.domain.bar;
 
 public class ReinforcingBar {
-    private final int diameter;
+    private final BarDiameterType diameterType;
 
-    public ReinforcingBar(int diameter) {
-        this.diameter = diameter;
+    public ReinforcingBar(BarDiameterType diameterType) {
+        this.diameterType = diameterType;
     }
 
     public int getDiameter() {
-        return diameter;
+        return diameterType.getValue();
     }
 }

@@ -4,9 +4,9 @@
 package com.github.matjanko.engineer.concrete.cover.domain.bar;
 
 public class ReinforcingBarFactory {
-    public ReinforcingBar createReinforcingBar(BarDiameter diameter) {
-        //TODO validate
+    public ReinforcingBar createReinforcingBar(int diameter) {
 
-        return new ReinforcingBar(diameter.valueOf());
+        BarDiameterType barDiameterType = BarDiameterType.getType(diameter);
+        return new ReinforcingBar(barDiameterType);
     }
 }
