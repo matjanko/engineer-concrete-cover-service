@@ -12,4 +12,8 @@ public class Concrete {
     public String getStrengthClassName() {
         return strengthClass.getName();
     }
+
+    public int getMaxAggregateSize() {
+        return maxAggregateSize;
+    }
 }
