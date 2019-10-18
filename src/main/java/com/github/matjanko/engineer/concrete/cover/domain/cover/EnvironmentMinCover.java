@@ -4,28 +4,19 @@
 package com.github.matjanko.engineer.concrete.cover.domain.cover;
 
 import com.github.matjanko.engineer.concrete.cover.domain.exposure.ExposureClass;
-import com.github.matjanko.engineer.concrete.cover.domain.structuralclass.StructuralClass;
+import com.github.matjanko.engineer.concrete.cover.domain.structuralclass.StructuralClassMark;
+
+import java.util.List;
 
 public class EnvironmentMinCover {
-    private final ExposureClass exposureClass;
-    private final StructuralClass structuralClass;
+    private final StructuralClassMark structuralClassMark;
+    private final List<ExposureClass> exposureClasses;
     private final int cover;
 
-    public EnvironmentMinCover(ExposureClass exposureClass, StructuralClass structuralClass, int cover) {
-        this.exposureClass = exposureClass;
-        this.structuralClass = structuralClass;
+    public EnvironmentMinCover(StructuralClassMark structuralClassMark,
+                               List<ExposureClass> exposureClasses, int cover) {
+        this.structuralClassMark = structuralClassMark;
+        this.exposureClasses = exposureClasses;
         this.cover = cover;
-    }
-
-    public ExposureClass getExposureClass() {
-        return exposureClass;
-    }
-
-    public StructuralClass getStructuralClass() {
-        return structuralClass;
-    }
-
-    public int getCover() {
-        return cover;
     }
 }
