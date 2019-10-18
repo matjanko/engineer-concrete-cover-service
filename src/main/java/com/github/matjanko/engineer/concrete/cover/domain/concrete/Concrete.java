@@ -10,10 +10,14 @@ public class Concrete {
     }
 
     public String getStrengthClassName() {
-        return strengthClass.getName();
+        return strengthClass.toString();
     }
 
     public int getMaxAggregateSize() {
         return maxAggregateSize;
+    }
+
+    public int getCharacteristicCompressiveStrength() {
+        return Integer.parseInt(strengthClass.name().substring(1, 3));
     }
 }
