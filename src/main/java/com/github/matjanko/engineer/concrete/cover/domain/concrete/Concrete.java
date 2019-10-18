@@ -18,6 +18,6 @@ public class Concrete {
     }
 
     public int getCharacteristicCompressiveStrength() {
-        return Integer.parseInt(strengthClass.name().substring(1, 3));
+        return strengthClass.getCompressiveStrength();
     }
 }

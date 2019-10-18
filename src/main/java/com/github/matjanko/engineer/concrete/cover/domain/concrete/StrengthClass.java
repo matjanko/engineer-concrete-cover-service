@@ -10,6 +10,10 @@ public enum StrengthClass {
         return this.name().replace("_", "/");
     }
 
+    public int getCompressiveStrength() {
+        return Integer.parseInt(this.name().substring(1, 3));
+    }
+
     public static StrengthClass getStrengthClass(String name) {
         return Stream.of(StrengthClass.values())
                 .filter(s -> s.toString().equals(name))
